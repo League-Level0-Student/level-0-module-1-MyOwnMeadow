@@ -12,9 +12,12 @@ public class TheRiddler {
 				+ "the poor have it, the rich need it,\r\n"
 				+ "and if you eat it, you'll die? ");
 		
-		if(riddle1.equals("Nothing")) {
+		if(riddle1.equalsIgnoreCase("Nothing")) {
 			score += 1;
 			JOptionPane.showMessageDialog(null, "CORRECT!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "INCORECT. (Think about it a litle harder, this is a long-time classic)");
 		}
 	
 	//Riddle #2
@@ -23,14 +26,30 @@ public class TheRiddler {
 				+ "Who uses it can neither see nor feel it.\r\n"
 				+ "What is it?");
 		
-		if(riddle2.equals("A coffin")) {
-			score += 1;
+		if(riddle2.equalsIgnoreCase("A coffin")) {
+			score += 5;
 			JOptionPane.showMessageDialog(null, "CORRECT!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "INCORRECT. (This is a hard one, so I'll give you a hint;\r\n"
+					+ "You'll never use it in your life, but you will after you die)");
 		}
 		
 	//Riddle #3
-		String riddle3 = JOptionPane.showInputDialog("");
-		// 2. Make a pop up to show the score.
+		String riddle3 = JOptionPane.showInputDialog("Some crave me on a busy day, but dread me during a conversaytion.\r\n"
+				+ "If you say my name, I will brake.\r\n"
+				+ "What am I?");
+		
+		if(riddle3.equalsIgnoreCase("Silence")) {
+			score += 3;
+			JOptionPane.showMessageDialog(null, "CORRECT!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "INCORRECT. ([...] is another way to say the ancer, but not what you have to type)");
+		}
+	//Finale Score
+		JOptionPane.showMessageDialog(null, "FINALE SCORE:" + score + "\r\n"
+				+ "(Try to see if you can get a beter score next time!)");
 		
 	}
 }
