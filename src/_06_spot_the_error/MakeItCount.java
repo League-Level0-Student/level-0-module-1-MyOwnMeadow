@@ -10,9 +10,11 @@ public class MakeItCount {
 	// CODE.
 
 	public static void main(String[] args) {
-		int number = 0;
-		for (int i=1; i<4; i++) {
-			System.out.println(number);
+		int number = 0;				//Unnecessary line of code; should remove
+		for(int i=1; i<4; i++) {
+			System.out.println(i);		//Changed "number" to "i"
+											//Can also replace all "i"s to "number," and remove the "int" int the for loop,
+												//but changing 1 variable is quicker then changing 3
 		}
 	}
 }
